@@ -76,4 +76,4 @@ Now build the WASI rust components into the compiled output directory.
 > If you get: failed to find the 'wasm32-wasip1' target and 'rustup' is not available
 
 >
-> brew uninstall rust & install it from [https://rustup.rs](url)
+> brew uninstall rust & install it from [https://rustup.rs]([url](https://rustup.rs/))
