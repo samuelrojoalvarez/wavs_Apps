@@ -42,3 +42,15 @@ The examples showcase how to build and deploy AVSs (Actively Validated Services)
   Details about Cargo Components here.
 </details>
 
+## Create Project
+
+   ```bash
+   # If you don't have foundry: `curl -L https://foundry.paradigm.xyz | bash && $HOME/.foundry/bin/foundryup`
+   forge init --template Lay3rLabs/wavs-foundry-template my-wavs --branch 0.3
+
+
+
+## Solidity
+
+Install the required packages to build the Solidity contracts. This project supports both submodules and npm packages.
+
