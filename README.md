@@ -103,7 +103,6 @@ Fetch basketball scores from SportRadar API.
 ## WAVS
 
 > [!NOTE]  
-
 If you are running on a Mac with an ARM chip, you will need to do the following:
 
 ·Set up Rosetta: softwareupdate --install-rosetta
