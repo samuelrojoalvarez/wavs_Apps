@@ -21,3 +21,24 @@ The examples showcase how to build and deploy AVSs (Actively Validated Services)
    git clone https://github.com/dabit3/wavs-eigenlayer-examples.git
    cd wavs-eigenlayer-examples
 
+
+## System Requirements
+
+<details>
+  <summary>Core (Docker, Compose, Make, JQ, Node v21+)</summary>
+  
+  Details about Core requirements here.
+</details>
+
+<details>
+  <summary>Rust v1.84+</summary>
+  
+  Details about Rust version here.
+</details>
+
+<details>
+  <summary>Cargo Components</summary>
+  
+  Details about Cargo Components here.
+</details>
+
