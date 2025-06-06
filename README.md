@@ -71,4 +71,9 @@ Now build the WASI rust components into the compiled output directory.
 >
 > run, `wkg config --default-registry wa.dev`
 
+> ⚠ **Warning**
+>
+> If you get: failed to find the 'wasm32-wasip1' target and 'rustup' is not available
 
+>
+> brew uninstall rust & install it from [https://rustup.rs](url)
