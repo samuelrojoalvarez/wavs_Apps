@@ -48,6 +48,9 @@ The examples showcase how to build and deploy AVSs (Actively Validated Services)
    # If you don't have foundry: `curl -L https://foundry.paradigm.xyz | bash && $HOME/.foundry/bin/foundryup`
    forge init --template Lay3rLabs/wavs-foundry-template my-wavs --branch 0.3
    ```
+> [!TIP]
+Run `make help` to see all available commands and environment variable overrides.
+
 
 ## Solidity
 
@@ -63,17 +66,17 @@ Install the required packages to build the Solidity contracts. This project supp
    forge test
    ```
 ## Build WASI components
-Now build the WASI rust components into the compiled output directory.
+Now build the WASI rust components into the `compiled` output directory.
 
-> ⚠ **Warning**
+> [!WARNING]  
 >
 > If you get: `error: no registry configured for namespace "wavs"`
 >
 > run, `wkg config --default-registry wa.dev`
 
-> ⚠ **Warning**
+> [!WARNING]  
 >
-> If you get: failed to find the 'wasm32-wasip1' target and 'rustup' is not available
+> If you get: `failed to find the 'wasm32-wasip1' target and 'rustup' is not available`
 
 >
 > `brew uninstall rust` & install it from [[https://rustup.rs/]](url)
@@ -99,14 +102,14 @@ Fetch basketball scores from SportRadar API.
    ```
 ## WAVS
 
-ℹ️ Note
+> [!NOTE]  
 
 If you are running on a Mac with an ARM chip, you will need to do the following:
 
-Set up Rosetta: softwareupdate --install-rosetta
-Enable Rosetta (Docker Desktop: Settings -> General -> enable "Use Rosetta for x86_64/amd64 emulation on Apple Silicon")
+·Set up Rosetta: softwareupdate --install-rosetta
+·Enable Rosetta (Docker Desktop: Settings -> General -> enable "Use Rosetta for x86_64/amd64 emulation on Apple Silicon")
 Configure one of the following networking:
 
-Docker Desktop: Settings -> Resources -> Network -> 'Enable Host Networking'
-brew install chipmk/tap/docker-mac-net-connect && sudo brew services start chipmk/tap/docker-mac-net-connect
+·Docker Desktop: Settings -> Resources -> Network -> 'Enable Host Networking'
+·`brew install chipmk/tap/docker-mac-net-connect && sudo brew services start chipmk/tap/docker-mac-net-connect`
 
