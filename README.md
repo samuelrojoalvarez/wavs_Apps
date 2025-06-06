@@ -47,10 +47,28 @@ The examples showcase how to build and deploy AVSs (Actively Validated Services)
    ```bash
    # If you don't have foundry: `curl -L https://foundry.paradigm.xyz | bash && $HOME/.foundry/bin/foundryup`
    forge init --template Lay3rLabs/wavs-foundry-template my-wavs --branch 0.3
-
-
+   ```
 
 ## Solidity
 
 Install the required packages to build the Solidity contracts. This project supports both submodules and npm packages.
+   ```bash
+   # Install packages (npm & submodules)
+   make setup
+   
+   # Build the contracts
+   forge build
+   
+   # Run the solidity tests
+   forge test
+   ```
+## Build WASI components
+Now build the WASI rust components into the compiled output directory.
+
+> ⚠️ **Warning**
+>
+> If you get: `error: no registry configured for namespace "wavs"`
+>
+> run, `wkg config --default-registry wa.dev`
+
 
