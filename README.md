@@ -21,6 +21,16 @@ The examples showcase how to build and deploy AVSs (Actively Validated Services)
    git clone https://github.com/dabit3/wavs-eigenlayer-examples.git
    cd wavs-eigenlayer-examples
 
+## ETH Price Oracle
+ports Scores Oracle
+The Sports Scores Oracle is a simple oracle service that fetches the current scores of basketball games from SportRadar and saves it on chain.
+
+> Prompt to recreate this component available here.
+
+## OpenAI Inference
+The OpenAI Inference is a simple oracle service that fetches the current inference of OpenAI from OpenAI and saves it on chain.
+
+> Prompt to recreate this component available here.
 
 ## System Requirements
 
@@ -121,3 +131,35 @@ Start an ethereum node (anvil), the WAVS service, and deploy eigenlayer contract
    # You can stop the services with `ctrl+c`. Some MacOS terminals require pressing it twice.
    make start-all
    ```
+## Deploy Contract
+Upload your service's trigger and submission contracts. The trigger contract is where WAVS will watch for events, and the submission contract is where the AVS service operator will submit the result on chain.
+   ```bash
+   export SERVICE_MANAGER_ADDR=`make get-eigen-service-manager-from-deploy`
+   forge script ./script/Deploy.s.sol ${SERVICE_MANAGER_ADDR} --sig "run(string)" --rpc-url http://localhost:8545 --broadcast
+   ```
+> [!TIP] 
+> You can see the deployed trigger address with make get-trigger-from-deploy and the deployed submission address with make get-service-handler-from-deploy
+
+## Deploy Service
+
+Deploy the compiled component with the contracts from the previous steps. Review the makefile for more details and configuration options.TRIGGER_EVENT is the event that the trigger contract emits and WAVS watches for. By altering SERVICE_TRIGGER_ADDR you can watch events for contracts others have deployed.
+
+   ```bash
+   TRIGGER_EVENT="NewTrigger(bytes)" make deploy-service
+   ```bash
+
+## Trigger the Service
+
+Anyone can now call the trigger contract which emits the trigger event WAVS is watching for from the previous step. WAVS then calls the service and saves the result on-chain.
+   ```bash
+   export COIN_MARKET_CAP_ID=1
+   export SERVICE_TRIGGER_ADDR=`make get-trigger-from-deploy`
+   forge script ./script/Trigger.s.sol ${SERVICE_TRIGGER_ADDR} ${COIN_MARKET_CAP_ID} --sig "run(string,string)" --rpc-url http://localhost:8545 --broadcast -v 4
+   ```
+## Show the result
+Query the latest submission contract id from the previous request made.
+   ```bash
+   # Get the latest TriggerId and show the result via `script/ShowResult.s.sol`
+   make show-result
+   ```
+
