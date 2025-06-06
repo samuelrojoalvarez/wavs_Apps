@@ -76,7 +76,7 @@ Now build the WASI rust components into the compiled output directory.
 > If you get: failed to find the 'wasm32-wasip1' target and 'rustup' is not available
 
 >
-> brew uninstall rust & install it from [[https://rustup.rs/]](url)
+> `brew uninstall rust` & install it from [[https://rustup.rs/]](url)
    ```bash
    make wasi-build # or `make build` to include solidity compilation.
    ```
@@ -97,6 +97,16 @@ Fetch basketball scores from SportRadar API.
    # Call with a game ID
    make scores-exec GAME_ID="fa15684d-0966-46e7-a3f8-f1d378692109"
    ```
+## WAVS
 
+ℹ️ Note
 
+If you are running on a Mac with an ARM chip, you will need to do the following:
+
+Set up Rosetta: softwareupdate --install-rosetta
+Enable Rosetta (Docker Desktop: Settings -> General -> enable "Use Rosetta for x86_64/amd64 emulation on Apple Silicon")
+Configure one of the following networking:
+
+Docker Desktop: Settings -> Resources -> Network -> 'Enable Host Networking'
+brew install chipmk/tap/docker-mac-net-connect && sudo brew services start chipmk/tap/docker-mac-net-connect
 
