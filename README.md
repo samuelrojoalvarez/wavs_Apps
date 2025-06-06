@@ -22,8 +22,10 @@ The examples showcase how to build and deploy AVSs (Actively Validated Services)
    cd wavs-eigenlayer-examples
 
 ## ETH Price Oracle
-ports Scores Oracle
-The Sports Scores Oracle is a simple oracle service that fetches the current scores of basketball games from SportRadar and saves it on chain.
+The ETH Price Oracle is a simple oracle service that fetches the current price of Ethereum from [CoinMarketCap]([url](https://coinmarketcap.com/)) and saves it on chain.
+
+## Sports Scores Oracle
+The Sports Scores Oracle is a simple oracle service that fetches the current scores of basketball games from [SportRadar]([url](https://sportradar.com/)) and saves it on chain.
 
 > Prompt to recreate this component available here.
 
