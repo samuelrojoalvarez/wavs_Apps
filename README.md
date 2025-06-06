@@ -10,7 +10,7 @@ The examples showcase how to build and deploy AVSs (Actively Validated Services)
 
 - Rust and Cargo installed
 - Node.js and npm installed
-- Docker installed
+- Docker installed 
 - Foundry for Solidity development
 
 ## Getting Started
