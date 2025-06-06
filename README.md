@@ -65,7 +65,7 @@ Install the required packages to build the Solidity contracts. This project supp
 ## Build WASI components
 Now build the WASI rust components into the compiled output directory.
 
-> ⚠️ **Warning**
+> ⚠ **Warning**
 >
 > If you get: `error: no registry configured for namespace "wavs"`
 >
