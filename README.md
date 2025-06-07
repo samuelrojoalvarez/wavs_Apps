@@ -32,7 +32,7 @@ The Sports Scores Oracle is a simple oracle service that fetches the current sco
 ## OpenAI Inference
 The OpenAI Inference is a simple oracle service that fetches the current inference of OpenAI from OpenAI and saves it on chain.
 
-> Prompt to recreate this component available here.
+> Prompt to recreate this component available [here](https://gist.github.com/samuelrojoalvarez/4c3683f97a6e86a33cd47a545f3eaa6c).
 
 ## System Requirements
 
