@@ -18,7 +18,7 @@ The examples showcase how to build and deploy AVSs (Actively Validated Services)
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/dabit3/wavs-eigenlayer-examples.git
+   git clone https://github.com/samuelrojoalvarez/wavs_Apps.git
    cd wavs-eigenlayer-examples
 
 ## ETH Price Oracle
