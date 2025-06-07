@@ -66,7 +66,7 @@ Run `make help` to see all available commands and environment variable overrides
 
 ## Solidity
 
-Install the required packages to build the Solidity contracts. This project supports both submodules and [npm packages](https://github.com/samuelrojoalvarez/wavs_Apps/blob/main/package.json).
+Install the required packages to build the Solidity contracts. This project supports both [submodules](https://github.com/Lay3rLabs/wavs-foundry-template) and [npm packages](https://github.com/samuelrojoalvarez/wavs_Apps/blob/main/package.json).
    ```bash
    # Install packages (npm & submodules)
    make setup
