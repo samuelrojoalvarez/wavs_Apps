@@ -27,7 +27,7 @@ The ETH Price Oracle is a simple oracle service that fetches the current price o
 ## Sports Scores Oracle
 The Sports Scores Oracle is a simple oracle service that fetches the current scores of basketball games from [SportRadar]([url](https://sportradar.com/)) and saves it on chain.
 
-> Prompt to recreate this component available [here].(https://gist.github.com/samuelrojoalvarez/de38e6cbbe56da081d98f1cb3c97fbe2)).
+> Prompt to recreate this component available [here](https://gist.github.com/samuelrojoalvarez/de38e6cbbe56da081d98f1cb3c97fbe2).
 
 ## OpenAI Inference
 The OpenAI Inference is a simple oracle service that fetches the current inference of OpenAI from OpenAI and saves it on chain.
