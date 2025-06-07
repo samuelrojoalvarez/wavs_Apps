@@ -1,4 +1,4 @@
-# WAVS + EigenLayer Examples
+# [WAVS](https://docs.wavs.xyz/) + EigenLayer Examples
 
 This repository contains examples demonstrating the integration of WAVS (WebAssembly Actively Validated Services) with EigenLayer.
 
@@ -22,10 +22,10 @@ The examples showcase how to build and deploy AVSs (Actively Validated Services)
    cd wavs-eigenlayer-examples
 
 ## ETH Price Oracle
-The ETH Price Oracle is a simple oracle service that fetches the current price of Ethereum from [CoinMarketCap]([url](https://coinmarketcap.com/)) and saves it on chain.
+The ETH Price Oracle is a simple oracle service that fetches the current price of Ethereum from [CoinMarketCap](https://coinmarketcap.com/) and saves it on chain.
 
 ## Sports Scores Oracle
-The Sports Scores Oracle is a simple oracle service that fetches the current scores of basketball games from [SportRadar]([url](https://sportradar.com/)) and saves it on chain.
+The Sports Scores Oracle is a simple oracle service that fetches the current scores of basketball games from [SportRadar](https://sportradar.com/) and saves it on chain.
 
 > Prompt to recreate this component available [here](https://gist.github.com/samuelrojoalvarez/de38e6cbbe56da081d98f1cb3c97fbe2).
 
@@ -66,7 +66,7 @@ Run `make help` to see all available commands and environment variable overrides
 
 ## Solidity
 
-Install the required packages to build the Solidity contracts. This project supports both submodules and npm packages.
+Install the required packages to build the Solidity contracts. This project supports both submodules and [npm packages](https://github.com/samuelrojoalvarez/wavs_Apps/blob/main/package.json).
    ```bash
    # Install packages (npm & submodules)
    make setup
@@ -91,7 +91,7 @@ Now build the WASI rust components into the `compiled` output directory.
 > If you get: `failed to find the 'wasm32-wasip1' target and 'rustup' is not available`
 
 >
-> `brew uninstall rust` & install it from [[https://rustup.rs/]](url)
+> `brew uninstall rust` & install it from [https://rustup.rs/](https://rustup.rs/)
    ```bash
    make wasi-build # or `make build` to include solidity compilation.
    ```
@@ -123,7 +123,7 @@ Fetch basketball scores from SportRadar API.
 > ·`brew install chipmk/tap/docker-mac-net-connect && sudo brew services start chipmk/tap/docker-mac-net-connect`
 
 ## Start Environment
-Start an ethereum node (anvil), the WAVS service, and deploy eigenlayer contracts to the local network.
+Start an ethereum node (anvil), the WAVS service, and deploy [eigenlayer](https://www.eigenlayer.xyz/) contracts to the local network.
    ```bash
    cp .env.example .env
    
@@ -144,15 +144,15 @@ Upload your service's trigger and submission contracts. The trigger contract is 
 
 ## Deploy Service
 
-Deploy the compiled component with the contracts from the previous steps. Review the makefile for more details and configuration options.TRIGGER_EVENT is the event that the trigger contract emits and WAVS watches for. By altering SERVICE_TRIGGER_ADDR you can watch events for contracts others have deployed.
+Deploy the compiled component with the contracts from the previous steps. Review the [makefile](https://github.com/samuelrojoalvarez/wavs_Apps/blob/main/Makefile) for more details and configuration options.TRIGGER_EVENT is the event that the trigger contract emits and WAVS watches for. By altering SERVICE_TRIGGER_ADDR you can watch events for contracts others have deployed.
 
    ```bash
    TRIGGER_EVENT="NewTrigger(bytes)" make deploy-service
-   ```bash
+   ```
 
 ## Trigger the Service
 
-Anyone can now call the trigger contract which emits the trigger event WAVS is watching for from the previous step. WAVS then calls the service and saves the result on-chain.
+Anyone can now call the [trigger contract](https://github.com/samuelrojoalvarez/wavs_Apps/blob/main/src/contracts/WavsTrigger.sol) which emits the trigger event WAVS is watching for from the previous step. WAVS then calls the service and saves the result on-chain.
    ```bash
    export COIN_MARKET_CAP_ID=1
    export SERVICE_TRIGGER_ADDR=`make get-trigger-from-deploy`
