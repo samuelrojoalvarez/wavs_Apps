@@ -19,7 +19,7 @@ The examples showcase how to build and deploy AVSs (Actively Validated Services)
 
    ```bash
    git clone https://github.com/samuelrojoalvarez/wavs_Apps.git
-   cd wavs-eigenlayer-examples
+   cd wavs_Apps
 
 ## ETH Price Oracle
 The ETH Price Oracle is a simple oracle service that fetches the current price of Ethereum from [CoinMarketCap](https://coinmarketcap.com/) and saves it on chain.
