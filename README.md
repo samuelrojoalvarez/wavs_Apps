@@ -163,7 +163,4 @@ Query the latest submission contract id from the previous request made.
    ```bash
    # Get the latest TriggerId and show the result via `script/ShowResult.s.sol`
    make show-result
-
-    #[storage]
-    struct MyToken { core: Erc6909, supply: Erc6909Supply, metadata: Erc6909MetadataUri, enumerable: Erc6909Enumerable }
    ```
